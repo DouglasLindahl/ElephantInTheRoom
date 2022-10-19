@@ -1,0 +1,26 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  /*background-color: rgb(29, 28, 31);*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: absolute;
+  height: 60%;
+  width: 70%;
+  background-color: gainsboro;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.test {
+  z-index: 1;
+  height: 50px;
+  width: 50px;
+  background-color: orange;
+}
