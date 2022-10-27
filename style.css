@@ -1,26 +1,67 @@
+html {
+  color: white;
+}
+
 body {
   height: 100vh;
   width: 100vw;
-  /*background-color: rgb(29, 28, 31);*/
+  background-color: rgb(7, 7, 8);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.main {
+  position: relative;
+}
+
+main {
+  height: 500px;
+  width: 1000px;
+  background-color: rgb(29, 28, 31);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 40px;
+}
 .card {
-  position: absolute;
-  height: 60%;
-  width: 70%;
-  background-color: gainsboro;
+  height: 90%;
+  width: 800px;
   display: flex;
   justify-content: space-around;
+  align-items: flex-start;
+}
+
+.comments {
+  height: 90%;
+  width: 200px;
+}
+
+.questionCard {
+  height: 20%;
+  width: 25%;
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.answerInput {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.test {
-  z-index: 1;
-  height: 50px;
-  width: 50px;
-  background-color: orange;
+.correctAnswerText {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
 }
