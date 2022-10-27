@@ -56,6 +56,71 @@ require(__DIR__ . "/answers.php");
                     <input type="submit" name="submitAnswer">
                 </form>
             </div>
+            <!--Question 4-->
+            <!--Area for question-->
+            <div class="questionCard">
+                <!--Actual Question-->
+                <div class="question">
+                    <?php echo $questions[3]["question"]; ?>
+                </div>
+                <!--Collect answer input from user-->
+                <form action="main.php" method="POST" class="answerInput">
+                    <input type="text" name="questionFourAnswer" placeholder="answer">
+                    <input type="submit" name="submitAnswer">
+                </form>
+            </div>
+            <!--Question 5-->
+            <!--Area for question-->
+            <div class="questionCard">
+                <!--Actual Question-->
+                <div class="question">
+                    <?php echo $questions[4]["question"]; ?>
+                </div>
+                <!--Collect answer input from user-->
+                <form action="main.php" method="POST" class="answerInput">
+                    <input type="text" name="questionFiveAnswer" placeholder="answer">
+                    <input type="submit" name="submitAnswer">
+                </form>
+            </div>
+            <!--Question 6-->
+            <!--Area for question-->
+            <div class="questionCard">
+                <!--Actual Question-->
+                <div class="question">
+                    <?php echo $questions[5]["question"]; ?>
+                </div>
+                <!--Collect answer input from user-->
+                <form action="main.php" method="POST" class="answerInput">
+                    <input type="text" name="questionSixAnswer" placeholder="answer">
+                    <input type="submit" name="submitAnswer">
+                </form>
+            </div>
+            <!--Question 7-->
+            <!--Area for question-->
+            <div class="questionCard">
+                <!--Actual Question-->
+                <div class="question">
+                    <?php echo $questions[6]["question"]; ?>
+                </div>
+                <!--Collect answer input from user-->
+                <form action="main.php" method="POST" class="answerInput">
+                    <input type="text" name="questionSevenAnswer" placeholder="answer">
+                    <input type="submit" name="submitAnswer">
+                </form>
+            </div>
+            <!--Question 8-->
+            <!--Area for question-->
+            <div class="questionCard">
+                <!--Actual Question-->
+                <div class="question">
+                    <?php echo $questions[7]["question"]; ?>
+                </div>
+                <!--Collect answer input from user-->
+                <form action="main.php" method="POST" class="answerInput">
+                    <input type="text" name="questionEightAnswer" placeholder="answer">
+                    <input type="submit" name="submitAnswer">
+                </form>
+            </div>
         </div>
 
         <div class="comments">
