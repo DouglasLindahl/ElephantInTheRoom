@@ -25,7 +25,7 @@ require(__DIR__ . "/answers.php");
                     <?php echo $questions[0]["question"]; ?>
                 </div>
                 <!--Collect answer input from user-->
-                <form action="main.php" method="POST" class="answerInput">
+                <form action="index.php" method="POST" class="answerInput">
                     <input type="text" name="questionOneAnswer" placeholder="answer">
                     <input type="submit" name="submitAnswer">
                 </form>
@@ -38,7 +38,7 @@ require(__DIR__ . "/answers.php");
                     <?php echo $questions[1]["question"]; ?>
                 </div>
                 <!--Collect answer input from user-->
-                <form action="main.php" method="POST" class="answerInput">
+                <form action="index.php" method="POST" class="answerInput">
                     <input type="text" name="questionTwoAnswer" placeholder="answer">
                     <input type="submit" name="submitAnswer">
                 </form>
@@ -51,7 +51,7 @@ require(__DIR__ . "/answers.php");
                     <?php echo $questions[2]["question"]; ?>
                 </div>
                 <!--Collect answer input from user-->
-                <form action="main.php" method="POST" class="answerInput">
+                <form action="index.php" method="POST" class="answerInput">
                     <input type="text" name="questionThreeAnswer" placeholder="answer">
                     <input type="submit" name="submitAnswer">
                 </form>
@@ -64,7 +64,7 @@ require(__DIR__ . "/answers.php");
                     <?php echo $questions[3]["question"]; ?>
                 </div>
                 <!--Collect answer input from user-->
-                <form action="main.php" method="POST" class="answerInput">
+                <form action="index.php" method="POST" class="answerInput">
                     <input type="text" name="questionFourAnswer" placeholder="answer">
                     <input type="submit" name="submitAnswer">
                 </form>
@@ -77,7 +77,7 @@ require(__DIR__ . "/answers.php");
                     <?php echo $questions[4]["question"]; ?>
                 </div>
                 <!--Collect answer input from user-->
-                <form action="main.php" method="POST" class="answerInput">
+                <form action="index.php" method="POST" class="answerInput">
                     <input type="text" name="questionFiveAnswer" placeholder="answer">
                     <input type="submit" name="submitAnswer">
                 </form>
@@ -90,7 +90,7 @@ require(__DIR__ . "/answers.php");
                     <?php echo $questions[5]["question"]; ?>
                 </div>
                 <!--Collect answer input from user-->
-                <form action="main.php" method="POST" class="answerInput">
+                <form action="index.php" method="POST" class="answerInput">
                     <input type="text" name="questionSixAnswer" placeholder="answer">
                     <input type="submit" name="submitAnswer">
                 </form>
@@ -103,7 +103,7 @@ require(__DIR__ . "/answers.php");
                     <?php echo $questions[6]["question"]; ?>
                 </div>
                 <!--Collect answer input from user-->
-                <form action="main.php" method="POST" class="answerInput">
+                <form action="index.php" method="POST" class="answerInput">
                     <input type="text" name="questionSevenAnswer" placeholder="answer">
                     <input type="submit" name="submitAnswer">
                 </form>
@@ -116,7 +116,7 @@ require(__DIR__ . "/answers.php");
                     <?php echo $questions[7]["question"]; ?>
                 </div>
                 <!--Collect answer input from user-->
-                <form action="main.php" method="POST" class="answerInput">
+                <form action="index.php" method="POST" class="answerInput">
                     <input type="text" name="questionEightAnswer" placeholder="answer">
                     <input type="submit" name="submitAnswer">
                 </form>
@@ -125,7 +125,7 @@ require(__DIR__ . "/answers.php");
 
         <div class="comments">
             <div class="correctAnswerText">
-                <h1>AI:</h1>
+                <h1>Quizbot:</h1>
                 <p>
                     <?php echo $correctAnswerText ?>
                 </p>

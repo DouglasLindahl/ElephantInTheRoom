@@ -3,7 +3,7 @@
 
 
 
-function checkAnswer(int $x, int $y)
+function checkAnswer($x, $y)
 {
     if ($x == $y) {
         return (true);
@@ -51,7 +51,7 @@ function wrongAnswerComment()
 }
 
 
-function commentOnAnswer(int $yourAnswer, int $correctAnswerGiven)
+function commentOnAnswer($yourAnswer, $correctAnswerGiven)
 {
     if ($yourAnswer == null) {
         $correctAnswerText = noAnswerComment();
