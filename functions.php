@@ -15,10 +15,10 @@ function noAnswerComment()
 {
     $comments =
         [
-            "You have to answer the question...",
-            "Answer pls",
-            "At least guess before moving on",
-            "You must answer the question, it is not optional!"
+            "Your_answer == null",
+            "Answer the question before proceeding",
+            "An answer is required",
+            "No answer detected",
         ];
     $randomComment = rand(0, count($comments) - 1);
     return ($comments[$randomComment]);
@@ -29,9 +29,10 @@ function rightAnswerComment()
     $comments =
         [
             "That is correct!",
-            "That was too easy for you",
-            "Answer = Correct",
-            "+ 1 points for correct answer"
+            "Correct! That was too easy for you",
+            "Answer == Correct",
+            "Correct_answer_points += 1",
+            "Correct!",
         ];
     $randomComment = rand(0, count($comments) - 1);
     return ($comments[$randomComment]);
@@ -41,10 +42,10 @@ function wrongAnswerComment()
 {
     $comments =
         [
-            "Not so good job my dude...",
-            "You can do better than that my guy...",
-            "Are you even trying?",
-            "Do you are have stupid?"
+            "That answer is incorrect",
+            "Incorrect. Points subtracted",
+            "Wrong answer",
+            "Correct_answer_points += 0",
         ];
     $randomComment = rand(0, count($comments) - 1);
     return ($comments[$randomComment]);
