@@ -11,6 +11,18 @@ function checkAnswer($x, $y)
     return (false);
 }
 
+function lagComment($comment)
+{
+    $howManyLag = rand(3, 6);
+    $newAnswer = [];
+    for ($i = 0; $i <= $howManyLag; $i++) {
+        $newAnswer[] = $comment . "<br>";
+    }
+    $newAnswer[] = "sorry lag";
+    $newAnswer = implode("", $newAnswer);
+    return $newAnswer;
+}
+
 function noAnswerComment()
 {
     $comments =
@@ -20,8 +32,15 @@ function noAnswerComment()
             "An answer is required",
             "No answer detected",
         ];
+    $howOftenLag = rand(1, 10);
+
     $randomComment = rand(0, count($comments) - 1);
-    return ($comments[$randomComment]);
+    $comment = ($comments[$randomComment]);
+    if ($howOftenLag != 10) {
+        return $comment;
+    } else {
+        return lagComment($comment);
+    }
 }
 
 function rightAnswerComment()
@@ -34,8 +53,15 @@ function rightAnswerComment()
             "Correct_answer_points += 1",
             "Correct!",
         ];
+    $howOftenLag = rand(1, 10);
+
     $randomComment = rand(0, count($comments) - 1);
-    return ($comments[$randomComment]);
+    $comment = ($comments[$randomComment]);
+    if ($howOftenLag != 10) {
+        return $comment;
+    } else {
+        return lagComment($comment);
+    }
 }
 
 function wrongAnswerComment()
@@ -47,8 +73,15 @@ function wrongAnswerComment()
             "Wrong answer",
             "Correct_answer_points += 0",
         ];
+    $howOftenLag = rand(1, 10);
+
     $randomComment = rand(0, count($comments) - 1);
-    return ($comments[$randomComment]);
+    $comment = ($comments[$randomComment]);
+    if ($howOftenLag != 10) {
+        return $comment;
+    } else {
+        return lagComment($comment);
+    }
 }
 
 
