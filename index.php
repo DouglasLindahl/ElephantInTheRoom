@@ -128,8 +128,23 @@ require(__DIR__ . "/answers.php");
                 <h1>Quizbot:</h1>
                 <p>
                     <?php echo $correctAnswerText ?>
+                <form action="index.php" method="POST">
+                    <input type="submit" name="getAnswers" value="Get answers">
+                </form>
+                <?php
+                if (isset($_POST["getAnswers"])) {
+                ?>
+                    <div class="answers">
+                        <p> <?php echo "The answers are randomized! <br>"; ?> </p>
+                        <p> <?php getAnswers($questions); ?> </p>
+                    </div>
+                <?php
+                }
+                ?>
                 </p>
             </div>
+            </p>
+        </div>
         </div>
 
     </main>

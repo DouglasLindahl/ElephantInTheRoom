@@ -64,3 +64,14 @@ function commentOnAnswer($yourAnswer, $correctAnswerGiven)
     }
     return ($correctAnswerText);
 }
+
+
+function getAnswers($questions)
+{
+
+    shuffle($questions);
+    foreach ($questions as $question) {
+        echo $question["answer"];
+        echo "<br>";
+    }
+}

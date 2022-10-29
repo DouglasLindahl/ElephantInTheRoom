@@ -1,5 +1,4 @@
 <?php
-session_start();
 require(__DIR__ . "/functions.php");
 
 
@@ -21,6 +20,8 @@ $currentAnswer = $questions[0]["answer"];
 $yourAnswer = "";
 $correctAnswerGiven;
 $correctAnswerText = "";
+
+
 
 
 if (isset($_POST["questionOneAnswer"])) {
