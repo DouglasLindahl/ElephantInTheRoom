@@ -1,5 +1,6 @@
 <?php
 
+declare(strict_types=1);
 
 
 
@@ -32,11 +33,11 @@ function noAnswerComment()
             "An answer is required",
             "No answer detected",
         ];
-    $howOftenLag = rand(1, 10);
+    $howOftenLag = rand(1, 5);
 
     $randomComment = rand(0, count($comments) - 1);
     $comment = ($comments[$randomComment]);
-    if ($howOftenLag != 10) {
+    if ($howOftenLag != 1) {
         return $comment;
     } else {
         return lagComment($comment);
@@ -53,11 +54,11 @@ function rightAnswerComment()
             "Correct_answer_points += 1",
             "Correct!",
         ];
-    $howOftenLag = rand(1, 10);
+    $howOftenLag = rand(1, 5);
 
     $randomComment = rand(0, count($comments) - 1);
     $comment = ($comments[$randomComment]);
-    if ($howOftenLag != 10) {
+    if ($howOftenLag != 1) {
         return $comment;
     } else {
         return lagComment($comment);
@@ -73,11 +74,11 @@ function wrongAnswerComment()
             "Wrong answer",
             "Correct_answer_points += 0",
         ];
-    $howOftenLag = rand(1, 10);
+    $howOftenLag = rand(1, 5);
 
     $randomComment = rand(0, count($comments) - 1);
     $comment = ($comments[$randomComment]);
-    if ($howOftenLag != 10) {
+    if ($howOftenLag != 1) {
         return $comment;
     } else {
         return lagComment($comment);
