@@ -2,7 +2,9 @@ INSERT MANDATORY GIF
 
 # Project Title
 
-Text about the project and why it exists. This would also be a great place to link the project on One.com.
+QuizBot is a quiz where you have to answer simple math questions while QuizBot comments on your performance
+
+https://douglaslindahl.se/QuizBot/
 
 # Installation
 

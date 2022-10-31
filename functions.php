@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 
-
+//matches users answer with the correct answer to return true or false
 function checkAnswer($x, $y)
 {
     if ($x == $y) {
@@ -14,12 +14,15 @@ function checkAnswer($x, $y)
 
 function lagComment($comment)
 {
+    //decides how many times QuizBot will repeat itself
     $howManyLag = rand(3, 6);
     $newAnswer = [];
+    //the comment is added into NewAnswer multiple times
     for ($i = 0; $i <= $howManyLag; $i++) {
         $newAnswer[] = $comment . "<br>";
     }
     $newAnswer[] = "sorry lag";
+    //turns the array with multiple comments into a string
     $newAnswer = implode("", $newAnswer);
     return $newAnswer;
 }
@@ -33,10 +36,12 @@ function noAnswerComment()
             "An answer is required",
             "No answer detected",
         ];
+    //decides how ofter QuizBot will lag (1/5 times)
     $howOftenLag = rand(1, 5);
-
+    //decides which comment QuizBot will use
     $randomComment = rand(0, count($comments) - 1);
     $comment = ($comments[$randomComment]);
+    //checks if QuizBot will lag
     if ($howOftenLag != 1) {
         return $comment;
     } else {
@@ -72,7 +77,7 @@ function wrongAnswerComment()
             "That answer is incorrect",
             "Incorrect. Points subtracted",
             "Wrong answer",
-            "Correct_answer_points += 0",
+            "Points += 0",
         ];
     $howOftenLag = rand(1, 5);
 
@@ -102,7 +107,7 @@ function commentOnAnswer($yourAnswer, $correctAnswerGiven)
 
 function getAnswers($questions)
 {
-
+    //randomizes the order of the questions array and echoes the all the answers in the wrong order
     shuffle($questions);
     foreach ($questions as $question) {
         echo $question["answer"];

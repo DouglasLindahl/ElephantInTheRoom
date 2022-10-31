@@ -127,7 +127,7 @@ require(__DIR__ . "/answers.php");
             <div class="correctAnswerText">
                 <h1>Quizbot:</h1>
                 <p>
-                    <?php echo $correctAnswerText ?>
+                    <?php echo $quizBotComment ?>
                 <form action="index.php" method="POST">
                     <input type="submit" name="getAnswers" value="Get answers">
                 </form>

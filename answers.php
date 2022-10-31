@@ -3,7 +3,7 @@
 declare(strict_types=1);
 require(__DIR__ . "/functions.php");
 
-
+//all the questions and answers
 $questions = [
     ["question" => "3 + 7", "answer" => 10],
     ["question" => "15 + 112", "answer" => 127],
@@ -16,68 +16,66 @@ $questions = [
 ];
 
 
-$currentQuestion = $questions[0]["question"];
-$currentAnswer = $questions[0]["answer"];
-
 $yourAnswer = "";
 $correctAnswerGiven;
-$correctAnswerText = "";
+$quizBotComment = "Good luck";
 
 
 
-
+//Checks if the user has submitted an answer to the question
 if (isset($_POST["questionOneAnswer"])) {
     $yourAnswer = $_POST["questionOneAnswer"];
+    //true or false if your answer matches the correct answer
     $correctAnswerGiven = (checkAnswer($yourAnswer, $questions[0]["answer"]));
-
-    $correctAnswerText = commentOnAnswer($yourAnswer, $correctAnswerGiven);
+    //QuizBots comment on your answer if it was correct, incorrect or null
+    $quizBotComment = commentOnAnswer($yourAnswer, $correctAnswerGiven);
 }
 
 if (isset($_POST["questionTwoAnswer"])) {
     $yourAnswer = $_POST["questionTwoAnswer"];
     $correctAnswerGiven = (checkAnswer($yourAnswer, $questions[1]["answer"]));
 
-    $correctAnswerText = commentOnAnswer($yourAnswer, $correctAnswerGiven);
+    $quizBotComment = commentOnAnswer($yourAnswer, $correctAnswerGiven);
 }
 
 if (isset($_POST["questionThreeAnswer"])) {
     $yourAnswer = $_POST["questionThreeAnswer"];
     $correctAnswerGiven = (checkAnswer($yourAnswer, $questions[2]["answer"]));
 
-    $correctAnswerText = commentOnAnswer($yourAnswer, $correctAnswerGiven);
+    $quizBotComment = commentOnAnswer($yourAnswer, $correctAnswerGiven);
 }
 
 if (isset($_POST["questionFourAnswer"])) {
     $yourAnswer = $_POST["questionFourAnswer"];
     $correctAnswerGiven = (checkAnswer($yourAnswer, $questions[3]["answer"]));
 
-    $correctAnswerText = commentOnAnswer($yourAnswer, $correctAnswerGiven);
+    $quizBotComment = commentOnAnswer($yourAnswer, $correctAnswerGiven);
 }
 
 if (isset($_POST["questionFiveAnswer"])) {
     $yourAnswer = $_POST["questionFiveAnswer"];
     $correctAnswerGiven = (checkAnswer($yourAnswer, $questions[4]["answer"]));
 
-    $correctAnswerText = commentOnAnswer($yourAnswer, $correctAnswerGiven);
+    $quizBotComment = commentOnAnswer($yourAnswer, $correctAnswerGiven);
 }
 
 if (isset($_POST["questionSixAnswer"])) {
     $yourAnswer = $_POST["questionSixAnswer"];
     $correctAnswerGiven = (checkAnswer($yourAnswer, $questions[5]["answer"]));
 
-    $correctAnswerText = commentOnAnswer($yourAnswer, $correctAnswerGiven);
+    $quizBotComment = commentOnAnswer($yourAnswer, $correctAnswerGiven);
 }
 
 if (isset($_POST["questionSevenAnswer"])) {
     $yourAnswer = $_POST["questionSevenAnswer"];
     $correctAnswerGiven = (checkAnswer($yourAnswer, $questions[6]["answer"]));
 
-    $correctAnswerText = commentOnAnswer($yourAnswer, $correctAnswerGiven);
+    $quizBotComment = commentOnAnswer($yourAnswer, $correctAnswerGiven);
 }
 
 if (isset($_POST["questionEightAnswer"])) {
     $yourAnswer = $_POST["questionEightAnswer"];
     $correctAnswerGiven = (checkAnswer($yourAnswer, $questions[7]["answer"]));
 
-    $correctAnswerText = commentOnAnswer($yourAnswer, $correctAnswerGiven);
+    $quizBotComment = commentOnAnswer($yourAnswer, $correctAnswerGiven);
 }
