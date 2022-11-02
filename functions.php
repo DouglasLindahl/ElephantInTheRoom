@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-
 //matches users answer with the correct answer to return true or false
 function checkAnswer($x, $y)
 {
@@ -27,20 +26,14 @@ function lagComment($comment)
     return $newAnswer;
 }
 
-function noAnswerComment()
+function noAnswerComment($comments)
 {
-    $comments =
-        [
-            "Your_answer == null",
-            "Answer the question before proceeding",
-            "An answer is required",
-            "No answer detected",
-        ];
+
     //decides how ofter QuizBot will lag (1/5 times)
     $howOftenLag = rand(1, 5);
     //decides which comment QuizBot will use
     $randomComment = rand(0, count($comments) - 1);
-    $comment = ($comments[$randomComment]);
+    $comment = ($comments[2][$randomComment]);
     //checks if QuizBot will lag
     if ($howOftenLag != 1) {
         return $comment;
@@ -49,20 +42,12 @@ function noAnswerComment()
     }
 }
 
-function rightAnswerComment()
+function rightAnswerComment($comments)
 {
-    $comments =
-        [
-            "That is correct!",
-            "Correct! That was too easy for you",
-            "Answer == Correct",
-            "Correct_answer_points += 1",
-            "Correct!",
-        ];
     $howOftenLag = rand(1, 5);
 
     $randomComment = rand(0, count($comments) - 1);
-    $comment = ($comments[$randomComment]);
+    $comment = ($comments[0][$randomComment]);
     if ($howOftenLag != 1) {
         return $comment;
     } else {
@@ -70,19 +55,12 @@ function rightAnswerComment()
     }
 }
 
-function wrongAnswerComment()
+function wrongAnswerComment($comments)
 {
-    $comments =
-        [
-            "That answer is incorrect",
-            "Incorrect. Points subtracted",
-            "Wrong answer",
-            "Points += 0",
-        ];
     $howOftenLag = rand(1, 5);
 
     $randomComment = rand(0, count($comments) - 1);
-    $comment = ($comments[$randomComment]);
+    $comment = ($comments[1][$randomComment]);
     if ($howOftenLag != 1) {
         return $comment;
     } else {
@@ -91,15 +69,15 @@ function wrongAnswerComment()
 }
 
 
-function commentOnAnswer($yourAnswer, $correctAnswerGiven)
+function commentOnAnswer($yourAnswer, $correctAnswerGiven, $comments)
 {
     if ($yourAnswer == null) {
-        $correctAnswerText = noAnswerComment();
+        $correctAnswerText = noAnswerComment($comments);
     } else {
         if ($correctAnswerGiven)
-            $correctAnswerText = rightAnswerComment();
+            $correctAnswerText = rightAnswerComment($comments);
         if (!$correctAnswerGiven)
-            $correctAnswerText = wrongAnswerComment();
+            $correctAnswerText = wrongAnswerComment($comments);
     }
     return ($correctAnswerText);
 }
