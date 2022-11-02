@@ -14,7 +14,7 @@ $questions = [
     ["question" => "e^(iπ) + 1", "answer" => 0],
     ["question" => "5^5", "answer" => 3125]
 ];
-
+//all the comments that quizbot can make
 $comments = array(
     array(
         "That is correct!",
@@ -39,7 +39,7 @@ $comments = array(
 
 
 $yourAnswer = "";
-$correctAnswerGiven;
+$correctAnswerGiven; //bool
 $quizBotComment = "Good luck";
 
 

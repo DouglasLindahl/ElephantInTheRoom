@@ -1,5 +1,6 @@
 <?php
 require(__DIR__ . "/answers.php");
+$inputFieldPlaceholder = "answer";
 ?>
 
 
@@ -26,7 +27,7 @@ require(__DIR__ . "/answers.php");
                 </div>
                 <!--Collect answer input from user-->
                 <form action="index.php" method="POST" class="answerInput">
-                    <input type="text" name="questionOneAnswer" placeholder="answer">
+                    <input type="text" name="questionOneAnswer" placeholder=<?php echo $inputFieldPlaceholder ?>>
                     <input type="submit" name="submitAnswer">
                 </form>
             </div>
@@ -39,7 +40,7 @@ require(__DIR__ . "/answers.php");
                 </div>
                 <!--Collect answer input from user-->
                 <form action="index.php" method="POST" class="answerInput">
-                    <input type="text" name="questionTwoAnswer" placeholder="answer">
+                    <input type="text" name="questionTwoAnswer" placeholder=<?php echo $inputFieldPlaceholder ?>>
                     <input type="submit" name="submitAnswer">
                 </form>
             </div>
@@ -52,7 +53,7 @@ require(__DIR__ . "/answers.php");
                 </div>
                 <!--Collect answer input from user-->
                 <form action="index.php" method="POST" class="answerInput">
-                    <input type="text" name="questionThreeAnswer" placeholder="answer">
+                    <input type="text" name="questionThreeAnswer" placeholder=<?php echo $inputFieldPlaceholder ?>>
                     <input type="submit" name="submitAnswer">
                 </form>
             </div>
@@ -65,7 +66,7 @@ require(__DIR__ . "/answers.php");
                 </div>
                 <!--Collect answer input from user-->
                 <form action="index.php" method="POST" class="answerInput">
-                    <input type="text" name="questionFourAnswer" placeholder="answer">
+                    <input type="text" name="questionFourAnswer" placeholder=<?php echo $inputFieldPlaceholder ?>>
                     <input type="submit" name="submitAnswer">
                 </form>
             </div>
@@ -78,7 +79,7 @@ require(__DIR__ . "/answers.php");
                 </div>
                 <!--Collect answer input from user-->
                 <form action="index.php" method="POST" class="answerInput">
-                    <input type="text" name="questionFiveAnswer" placeholder="answer">
+                    <input type="text" name="questionFiveAnswer" placeholder=<?php echo $inputFieldPlaceholder ?>>
                     <input type="submit" name="submitAnswer">
                 </form>
             </div>
@@ -91,7 +92,7 @@ require(__DIR__ . "/answers.php");
                 </div>
                 <!--Collect answer input from user-->
                 <form action="index.php" method="POST" class="answerInput">
-                    <input type="text" name="questionSixAnswer" placeholder="answer">
+                    <input type="text" name="questionSixAnswer" placeholder=<?php echo $inputFieldPlaceholder ?>>
                     <input type="submit" name="submitAnswer">
                 </form>
             </div>
@@ -104,7 +105,7 @@ require(__DIR__ . "/answers.php");
                 </div>
                 <!--Collect answer input from user-->
                 <form action="index.php" method="POST" class="answerInput">
-                    <input type="text" name="questionSevenAnswer" placeholder="answer">
+                    <input type="text" name="questionSevenAnswer" placeholder=<?php echo $inputFieldPlaceholder ?>>
                     <input type="submit" name="submitAnswer">
                 </form>
             </div>
@@ -117,7 +118,7 @@ require(__DIR__ . "/answers.php");
                 </div>
                 <!--Collect answer input from user-->
                 <form action="index.php" method="POST" class="answerInput">
-                    <input type="text" name="questionEightAnswer" placeholder="answer">
+                    <input type="text" name="questionEightAnswer" placeholder=<?php echo $inputFieldPlaceholder ?>>
                     <input type="submit" name="submitAnswer">
                 </form>
             </div>
