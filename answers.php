@@ -38,7 +38,7 @@ $comments = array(
 );
 
 
-$yourAnswer = "";
+$yourAnswer = ""; //user will change this value later
 $correctAnswerGiven; //bool
 $quizBotComment = "Good luck";
 
