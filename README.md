@@ -25,4 +25,4 @@ Code review written by [Jane Doh](https://github.com/username).
 Tested by the following people:
 
 1. Thomas Danielsson
-2. John Doe
+2. Robin Persson
