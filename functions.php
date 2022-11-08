@@ -26,41 +26,15 @@ function lagComment($comment)
     return $newAnswer;
 }
 
-function noAnswerComment($comments)
+function answerComment($comments, $x)
 {
 
     //decides how ofter QuizBot will lag (1/5 times)
     $howOftenLag = rand(1, 5);
     //decides which comment QuizBot will use
     $randomComment = rand(0, count($comments) - 1);
-    $comment = ($comments[2][$randomComment]);
+    $comment = ($comments[$x][$randomComment]);
     //checks if QuizBot will lag
-    if ($howOftenLag != 1) {
-        return $comment;
-    } else {
-        return lagComment($comment);
-    }
-}
-
-function rightAnswerComment($comments)
-{
-    $howOftenLag = rand(1, 5);
-
-    $randomComment = rand(0, count($comments) - 1);
-    $comment = ($comments[0][$randomComment]);
-    if ($howOftenLag != 1) {
-        return $comment;
-    } else {
-        return lagComment($comment);
-    }
-}
-
-function wrongAnswerComment($comments)
-{
-    $howOftenLag = rand(1, 5);
-
-    $randomComment = rand(0, count($comments) - 1);
-    $comment = ($comments[1][$randomComment]);
     if ($howOftenLag != 1) {
         return $comment;
     } else {
@@ -72,12 +46,12 @@ function wrongAnswerComment($comments)
 function commentOnAnswer($yourAnswer, $correctAnswerGiven, $comments)
 {
     if ($yourAnswer == null) {
-        $correctAnswerText = noAnswerComment($comments);
+        $correctAnswerText = answerComment($comments, 2);
     } else {
         if ($correctAnswerGiven)
-            $correctAnswerText = rightAnswerComment($comments);
+            $correctAnswerText = answerComment($comments, 0);
         if (!$correctAnswerGiven)
-            $correctAnswerText = wrongAnswerComment($comments);
+            $correctAnswerText = answerComment($comments, 1);
     }
     return ($correctAnswerText);
 }

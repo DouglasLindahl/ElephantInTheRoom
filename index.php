@@ -27,7 +27,7 @@ $inputFieldPlaceholder = "answer";
                         <?php echo $questions[$i]["question"]; ?>
                     </div>
                     <!--Collect answer input from user-->
-                    <form action="test.php" method="POST" class="answerInput">
+                    <form action="index.php" method="POST" class="answerInput">
                         <input type="text" name=<?php echo $i ?> placeholder=<?php echo $inputFieldPlaceholder ?>>
                         <input type="submit" name="submitAnswer">
                     </form>
@@ -41,7 +41,7 @@ $inputFieldPlaceholder = "answer";
                 <h1>QuizBot:</h1>
                 <p>
                     <?php echo $quizBotComment ?>
-                <form action="test.php" method="POST">
+                <form action="index.php" method="POST">
                     <input type="submit" name="getAnswers" value="Get answers">
                 </form>
                 <?php
