@@ -39,11 +39,9 @@ $comments = array(
     )
 );
 
-
 $yourAnswer = ""; //user will change this value later
 $correctAnswerGiven; //bool
 $quizBotComment = "Good luck";
-
 
 for ($i = 0; $i < count($questions); $i++) {
     //Checks if the user has submitted an answer to the question

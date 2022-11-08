@@ -6,9 +6,9 @@ declare(strict_types=1);
 function checkAnswer($x, $y)
 {
     if ($x == $y) {
-        return (true);
+        return true;
     }
-    return (false);
+    return false;
 }
 
 function lagComment($comment)
@@ -42,7 +42,6 @@ function answerComment($comments, $x)
     }
 }
 
-
 function commentOnAnswer($yourAnswer, $correctAnswerGiven, $comments)
 {
     if ($yourAnswer == null) {
@@ -55,8 +54,6 @@ function commentOnAnswer($yourAnswer, $correctAnswerGiven, $comments)
     }
     return ($correctAnswerText);
 }
-
-
 function getAnswers($questions)
 {
     //randomizes the order of the questions array and echoes the all the answers in the wrong order

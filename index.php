@@ -3,7 +3,6 @@ require(__DIR__ . "/answers.php");
 $inputFieldPlaceholder = "answer";
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +16,6 @@ $inputFieldPlaceholder = "answer";
 
 <body>
     <main>
-
         <div class="card">
             <?php for ($i = 0; $i < count($questions); $i++) {
             ?>
@@ -35,7 +33,6 @@ $inputFieldPlaceholder = "answer";
             <?php
             } ?>
         </div>
-
         <div class="comments">
             <div class="correctAnswerText">
                 <h1>QuizBot:</h1>
@@ -59,11 +56,8 @@ $inputFieldPlaceholder = "answer";
             </p>
         </div>
         </div>
-
     </main>
-
 </body>
 
 </html>
-
 <?php
