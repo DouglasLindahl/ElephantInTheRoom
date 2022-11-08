@@ -17,111 +17,23 @@ $inputFieldPlaceholder = "answer";
 
 <body>
     <main>
+
         <div class="card">
-            <!--Question 1-->
-            <!--Area for question-->
-            <div class="questionCard">
-                <!--Actual Question-->
-                <div class="question">
-                    <?php echo $questions[0]["question"]; ?>
+            <?php for ($i = 0; $i < count($questions); $i++) {
+            ?>
+                <div class="questionCard">
+                    <!--Actual Question-->
+                    <div class="question">
+                        <?php echo $questions[$i]["question"]; ?>
+                    </div>
+                    <!--Collect answer input from user-->
+                    <form action="test.php" method="POST" class="answerInput">
+                        <input type="text" name=<?php echo $i ?> placeholder=<?php echo $inputFieldPlaceholder ?>>
+                        <input type="submit" name="submitAnswer">
+                    </form>
                 </div>
-                <!--Collect answer input from user-->
-                <form action="index.php" method="POST" class="answerInput">
-                    <input type="text" name="questionOneAnswer" placeholder=<?php echo $inputFieldPlaceholder ?>>
-                    <input type="submit" name="submitAnswer">
-                </form>
-            </div>
-            <!--Question 2-->
-            <!--Area for question-->
-            <div class="questionCard">
-                <!--Actual Question-->
-                <div class="question">
-                    <?php echo $questions[1]["question"]; ?>
-                </div>
-                <!--Collect answer input from user-->
-                <form action="index.php" method="POST" class="answerInput">
-                    <input type="text" name="questionTwoAnswer" placeholder=<?php echo $inputFieldPlaceholder ?>>
-                    <input type="submit" name="submitAnswer">
-                </form>
-            </div>
-            <!--Question 3-->
-            <!--Area for question-->
-            <div class="questionCard">
-                <!--Actual Question-->
-                <div class="question">
-                    <?php echo $questions[2]["question"]; ?>
-                </div>
-                <!--Collect answer input from user-->
-                <form action="index.php" method="POST" class="answerInput">
-                    <input type="text" name="questionThreeAnswer" placeholder=<?php echo $inputFieldPlaceholder ?>>
-                    <input type="submit" name="submitAnswer">
-                </form>
-            </div>
-            <!--Question 4-->
-            <!--Area for question-->
-            <div class="questionCard">
-                <!--Actual Question-->
-                <div class="question">
-                    <?php echo $questions[3]["question"]; ?>
-                </div>
-                <!--Collect answer input from user-->
-                <form action="index.php" method="POST" class="answerInput">
-                    <input type="text" name="questionFourAnswer" placeholder=<?php echo $inputFieldPlaceholder ?>>
-                    <input type="submit" name="submitAnswer">
-                </form>
-            </div>
-            <!--Question 5-->
-            <!--Area for question-->
-            <div class="questionCard">
-                <!--Actual Question-->
-                <div class="question">
-                    <?php echo $questions[4]["question"]; ?>
-                </div>
-                <!--Collect answer input from user-->
-                <form action="index.php" method="POST" class="answerInput">
-                    <input type="text" name="questionFiveAnswer" placeholder=<?php echo $inputFieldPlaceholder ?>>
-                    <input type="submit" name="submitAnswer">
-                </form>
-            </div>
-            <!--Question 6-->
-            <!--Area for question-->
-            <div class="questionCard">
-                <!--Actual Question-->
-                <div class="question">
-                    <?php echo $questions[5]["question"]; ?>
-                </div>
-                <!--Collect answer input from user-->
-                <form action="index.php" method="POST" class="answerInput">
-                    <input type="text" name="questionSixAnswer" placeholder=<?php echo $inputFieldPlaceholder ?>>
-                    <input type="submit" name="submitAnswer">
-                </form>
-            </div>
-            <!--Question 7-->
-            <!--Area for question-->
-            <div class="questionCard">
-                <!--Actual Question-->
-                <div class="question">
-                    <?php echo $questions[6]["question"]; ?>
-                </div>
-                <!--Collect answer input from user-->
-                <form action="index.php" method="POST" class="answerInput">
-                    <input type="text" name="questionSevenAnswer" placeholder=<?php echo $inputFieldPlaceholder ?>>
-                    <input type="submit" name="submitAnswer">
-                </form>
-            </div>
-            <!--Question 8-->
-            <!--Area for question-->
-            <div class="questionCard">
-                <!--Actual Question-->
-                <div class="question">
-                    <?php echo $questions[7]["question"]; ?>
-                </div>
-                <!--Collect answer input from user-->
-                <form action="index.php" method="POST" class="answerInput">
-                    <input type="text" name="questionEightAnswer" placeholder=<?php echo $inputFieldPlaceholder ?>>
-                    <input type="submit" name="submitAnswer">
-                </form>
-            </div>
+            <?php
+            } ?>
         </div>
 
         <div class="comments">
@@ -129,7 +41,7 @@ $inputFieldPlaceholder = "answer";
                 <h1>QuizBot:</h1>
                 <p>
                     <?php echo $quizBotComment ?>
-                <form action="index.php" method="POST">
+                <form action="test.php" method="POST">
                     <input type="submit" name="getAnswers" value="Get answers">
                 </form>
                 <?php
